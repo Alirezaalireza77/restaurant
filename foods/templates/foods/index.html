@@ -107,8 +107,8 @@
 						<div class="button-group filter-button-group">
 							<button class="active" data-filter="*">All</button>
 							<button data-filter=".drinks">Drinks</button>
-							<button data-filter=".lunch">Lunch</button>
-							<button data-filter=".dinner">Dinner</button>
+							<button data-filter=".Lunch">Lunch</button>
+							<button data-filter=".Dinner">Dinner</button>
 						</div>
 					</div>
 				</div>
@@ -116,7 +116,7 @@
 
 			<div class="row special-list">
                 {% for food in foods %}
-                    <div class="col-lg-4 col-md-6 special-grid drinks">
+                    <div class="col-lg-4 col-md-6 special-grid {{ food.category }}">
 					    <div class="gallery-single fix">
 						    <img src="{{ food.photo.url }}" class="img-fluid" alt="Image">
 						        <div class="why-text">

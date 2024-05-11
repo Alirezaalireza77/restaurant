@@ -114,8 +114,9 @@
 				</div>
 			</div>
 
-			<div class="row special-list">
+            <div class="row special-list">
                 {% for food in foods %}
+                <a href="{% url 'foods:detail' food.id %}">
                     <div class="col-lg-4 col-md-6 special-grid {{ food.category }}">
 					    <div class="gallery-single fix">
 						    <img src="{{ food.photo.url }}" class="img-fluid" alt="Image">
@@ -126,6 +127,7 @@
 						    </div>
 					    </div>
 				    </div>
+                </a>
 				{% endfor %}
 			</div>
 		</div>

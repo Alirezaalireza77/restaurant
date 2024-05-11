@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>مشخصات</title>
-</head>
-<body>
-    <ul>
-        <li>{{ food }}</li>
-        <li>{{ food.price }}</li>
-        <li>{{ food.description }}</li>
-        <li>{{ food.rate }}</li>
-    </ul>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+     <ul>
+        <li>
+	        {{ food.name }}
+            {{ food.description }}
+            {{ food.price }}
+            {{ food.rate }}   <img src="{{ food.photo.url }}" alt="food-image">
+
+        </li>
+     </ul>
+{% endblock %}

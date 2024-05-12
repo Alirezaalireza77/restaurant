@@ -9,7 +9,7 @@ class Reservation(models.Model):
     phone = models.CharField(_("تلفن"), max_length=20, blank=False)
     number = models.IntegerField(_("تعداد"), default=1)
     date = models.DateField(_("تاریخ"), auto_now=False, auto_now_add=False)
-    time = models.DateField(_("ساعت"), auto_now=False, auto_now_add=False)
+    time = models.DateTimeField(_("ساعت"), auto_now=False, auto_now_add=False)
 
     def __str__(self):
         return self.name
